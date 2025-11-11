@@ -1,0 +1,88 @@
+
+
+.LeftPanel{
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    background-color:  hsla(0, 0%, 0%, 0);
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.CurrentPage{
+    background-color: hsla(201, 56%, 72%, 0.8);
+    width: 200px;
+    height: 50px;
+    margin-left: 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* AnalyticsHub */
+
+.AnalyticsHub{
+    font-size: 19px;
+    color: gray;
+    margin-top: 50px;
+    gap: 20px;
+    display: grid;
+    justify-items: start;
+    margin-left: 30px
+    
+}
+
+.Dashboard, 
+.CustomRating,
+.Reports {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+
+img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/* Useful Information */
+
+.UsefulInformation{
+    font-size: 19px;
+    color: gray;
+    margin-top: 50px;
+    gap: 20px;
+    display: grid;
+    justify-items: start;
+    margin-left: 30px
+    
+}
+
+.SystemDescription, 
+.HelpFeetback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+
+img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    /* justify-content: center;
+    align-items: center; */
+}
