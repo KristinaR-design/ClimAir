@@ -1,6 +1,6 @@
 // Dashboard.jsx
-import Weather from "./Weather";
-import DistrictCars from "./District"
+import Weather from "../components/Weather";
+import DistrictCards from "../components/DistrictCards"
 
 import Co2 from "../images/Co2.png";
 import PM2 from "../images/PM2.png";
@@ -40,7 +40,7 @@ function StatCard({ iconSrc, titleTop = "Current", title, value, status = "Norma
 
 export default function Dashboard() {
     return (
-        <div className="min-h-screen ml-60 mt-[70px]">
+        <div className="min-h-screen ml-66 mt-[80px]">
             {/* Карточка погоды */}
             <div className="container mx-auto px-4">
                 <div className="flex justify-center mt-6">
@@ -83,7 +83,12 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            <DistrictCards />
+            <div className="container mx-auto px-4">
+                <div className="flex justify-center mt-6">
+                    <DistrictCards />
+                </div>
+            </div>
+
         </div>
     );
 }

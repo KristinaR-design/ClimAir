@@ -1,23 +1,41 @@
-import { useState } from 'react'
+import { Routes, Route, Outlet } from "react-router-dom";
+import LeftPanel from "./components/LeftPanel.jsx";
+import Header from "./components/Header.jsx";
 
-import './App.css'
-import LeftPanel from './components/LeftPanel.jsx'
-import Header from './components/Header.jsx'
-import Dash from './components/Dashboard.jsx'
+// страницы
+import Dashboard from "./pages/Dashboard.jsx";
+import CustomRating from "./pages/CustomRating.jsx";
+import Reports from "./pages/Report.jsx";
+import SystemDescription from "./pages/SystemDescription.jsx";
+import HelpFeetback from "./pages/HelpFeetback.jsx"; // проверь точное имя файла
 
-function App() {
-  const [count, setCount] = useState(0)
-
+// общий layout
+function Layout() {
   return (
-    <>
-     
-
-      <Dash />
-      <Header />
+    <div className="flex min-h-screen">
       <LeftPanel />
-
-    </>
-  )
+      <div className="flex-1">
+        <Header />
+        <main className="p-4">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/customrating" element={<CustomRating />} />
+        <Route path="/systemdescription" element={<SystemDescription />} />
+        <Route path="/help" element={<HelpFeetback />} />
+      </Route>
+      {/* 404 при желании */}
+      {/* <Route path="*" element={<div>Not found</div>} /> */}
+    </Routes>
+  );
+}
